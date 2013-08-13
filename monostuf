@@ -1,0 +1,37 @@
+# OS2 MAKEFILE FOR MONOSTUFF
+
+COMPILE=CL /c /DDEBUG /J /W3 /DLINT_ARGS /Zp /AL /Zi /Od 
+LINKLIBS=LLIBCEP
+LINKOPTS=/ALIGN:16 /CO /NOI /NOD:LLIBCE 
+
+#######################################################################
+
+mcls.obj:     mcls.c
+     $(COMPILE) $*.c
+
+mprt.obj:     mprt.c
+     $(COMPILE) $*.c
+
+snap.obj:     snap.c
+     $(COMPILE) $*.c
+
+msave.obj:     msave.c
+     $(COMPILE) $*.c
+
+csave.obj:     csave.c
+     $(COMPILE) $*.c
+
+mcls.exe:     mcls.obj
+     LINK $*.obj, $*.exe, $*.map, $(LINKLIBS) $(LINKOPTS);
+
+mprt.exe:     mprt.obj
+     LINK $*.obj, $*.exe, $*.map, $(LINKLIBS) $(LINKOPTS);
+
+snap.exe:     snap.obj
+     LINK $*.obj, $*.exe, $*.map, $(LINKLIBS) $(LINKOPTS);
+
+msave.exe:     msave.obj
+     LINK $*.obj, $*.exe, $*.map, $(LINKLIBS) $(LINKOPTS);
+
+csave.exe:     csave.obj
+     LINK $*.obj, $*.exe, $*.map, $(LINKLIBS) $(LINKOPTS);
