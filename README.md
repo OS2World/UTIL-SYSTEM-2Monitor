@@ -1,12 +1,11 @@
 UTIL-SYSTEM-2Monitor
 ====================
 
-Dual-monitor support. 
-
+Dual-monitor support.  Run two monitors under OS/2. This file includes several utilities to support dual-monitor OS2 systems, where one monitor is a CGA/EGA/VGA and the second monitor is a MDA.
 
 LICENSE
 ===============
-* Not SPecified
+* Not Specified
 
 COMPILE TOOLS
 ===============
